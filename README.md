@@ -46,7 +46,7 @@ git clone https://github.com/csymlstd/drupal-8-webpack-hmr.git
 ### Install dependencies
 
 ```
-npm install --save-dev
+npm install
 ```
 
 ### Configure Webpack
