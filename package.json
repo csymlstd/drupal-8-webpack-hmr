@@ -1,0 +1,51 @@
+{
+  "name": "drupal-8-webpack-hmr",
+  "version": "1.0.0",
+  "description": "A Drupal 8 theme base with Webpack preconfigured for HMR",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --hot",
+    "build": "NODE_ENV=production webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/csymlstd/drupal-8-webpack-hmr.git"
+  },
+  "author": "csymlstd",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/csymlstd/drupal-8-webpack-hmr/issues"
+  },
+  "homepage": "https://github.com/csymlstd/drupal-8-webpack-hmr#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.4.0",
+    "@babel/plugin-transform-arrow-functions": "^7.2.0",
+    "@babel/polyfill": "^7.4.0",
+    "@babel/preset-env": "^7.4.2",
+    "babel-loader": "^8.0.5",
+    "babel-minify-webpack-plugin": "^0.3.1",
+    "clean-webpack-plugin": "^2.0.1",
+    "css-loader": "^2.1.1",
+    "extract-css-chunks-webpack-plugin": "^4.0.2",
+    "file-loader": "^3.0.1",
+    "node-sass": "^4.11.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.1",
+    "postcss-loader": "^3.0.0",
+    "progress-bar-webpack-plugin": "^1.12.1",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "vue-loader": "^15.7.0",
+    "vue-template-compiler": "^2.6.10",
+    "webpack": "^4.29.6",
+    "webpack-build-notifier": "^0.1.31",
+    "webpack-cli": "^3.3.0",
+    "webpack-dev-server": "^3.2.1",
+    "write-file-webpack-plugin": "^4.5.0"
+  },
+  "dependencies": {
+    "@babel/plugin-transform-shorthand-properties": "^7.2.0",
+    "autoprefixer": "^9.5.0"
+  }
+}

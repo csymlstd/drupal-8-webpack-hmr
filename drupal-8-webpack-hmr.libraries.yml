@@ -1,0 +1,18 @@
+global:
+  version: VERSION
+  css:
+    base:
+      assets/dist/css/app.css:
+        preprocess: false
+        minified: true
+  js:
+    assets/dist/js/app.js:
+      preprocess: false
+      minified: true
+      scope: footer
+  dependencies:
+    - core/jquery
+    - core/jquery.once
+    - core/drupal
+    - core/drupal.ajax
+    - core/drupalSettings

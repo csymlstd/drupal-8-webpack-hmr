@@ -1,0 +1,6 @@
+# Ignore node_modules
+node_modules
+
+# Uncomment to ignore dist files
+# This is useful if you are using deployment tools to build
+#assets/dist

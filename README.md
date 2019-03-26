@@ -1,7 +1,7 @@
 # drupal-8-webpack-hmr
 **A Drupal 8 theme base with Webpack preconfigured for HMR.**
 
-When developing locally, I had hit a lot of pain points trying to get webpack-dev-server to successfully proxy an Apache driven site. Logging in to the site through localhost would redirect to the apache set domain, not setting the cookie on localhost - proxying the dev server with browsersync would fix this problem but cause mixed results. 
+When developing locally, I had hit a lot of pain points trying to get webpack-dev-server to successfully proxy an Apache driven site (Acquia Dev Desktop, and Vagrant). Logging in to the site through localhost would redirect to the apache set domain, not setting the cookie on localhost - proxying the dev server with browsersync would fix this problem but cause mixed results. 
 
 This theme base should allow you to add Webpack to your existing theme, or start a new one, allowing you to proxy an HTTPS only Drupal 8 site on Apache. It supports hot module replacement with CSS and Vue and includes the basic Drupal yml files to load your dist files, and launch a webpack dev server instance.
 
@@ -9,9 +9,10 @@ This theme base should allow you to add Webpack to your existing theme, or start
 
 - Drupal 8 Theme Libraries
 - Webpack 4
-- ES6 support with Babel
-- SASS support with autoprefixer
+- ES6 support with Babel 7
+- SASS support with Autoprefixer
 - Vue support
+- Access to `Drupal` and `drupalSettings` within components
 
 ## Structure
 
@@ -52,6 +53,9 @@ npm install --save-dev
 In your `webpack.config.js` file
 - Update the `PROXY` variable with the full domain to proxy: `https://drupal8.dd:8443`
 - If you are proxying a non-https site, change the devServer `https` property to `false`.
+
+In your `babel.config.js`
+- Update [targets](https://babeljs.io/docs/en/babel-preset-env#targets) for the browsers you need to support. Default is IE >= 10, and the last 2 versions of other browsers.
 
 ### Configure Drupal
 - Update your `settings.php` to trust localhost and configure local development.
